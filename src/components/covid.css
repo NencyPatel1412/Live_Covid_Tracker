@@ -1,0 +1,131 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+section {
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    color: red;
+    margin-bottom: 10px;
+    font-size: 2rem; /* Adjusted for the "LIVE" text */
+    font-weight: bold; /* Added bold font */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Adjusted for the "COVID-19 CORONAVIRUS TRACKER" text */
+    color: white;
+    font-weight: bold; /* Added bold font */
+}
+
+/* Grid Layout */
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+/* Card Styling */
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: transform 0.3s ease;
+    height: 150px; /* Fixed height for consistent box size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card_main {
+    text-align: center;
+}
+
+.card_inner {
+    margin-bottom: 10px;
+}
+
+.card_name {
+    font-size: 1.5rem; /* Adjusted for the labels (e.g., OUR COUNTRY, TOTAL RECOVERED) */
+    margin: 0;
+    color: #ccc;
+    margin-bottom: 10px;
+    font-weight: bold; /* Added bold font */
+}
+
+.card_name span {
+    color: yellow;
+}
+
+.card_total {
+    font-size: 2.5rem; /* Adjusted for the numbers (e.g., INDIA, 20073367) */
+    margin: 0;
+    color: #fff;
+    font-weight: bold; /* Added bold font */
+}
+
+.card_small {
+    font-size: 2rem; /* Adjusted for the smaller text (e.g., INDIA) */
+    font-weight: bold; /* Added bold font */
+}
+
+/* Colors for Different Sections */
+.card:nth-child(1) { background-color: #3F51B5; } /* Our Country - Blue */
+.card:nth-child(2) { background-color: #006400; } /* Recovered - Green */
+.card:nth-child(3) { background-color: #f48207; } /* Confirmed - Yellow */
+.card:nth-child(4) { background-color: #F44336; } /* Deaths - Red */
+.card:nth-child(5) { background-color: #6e3d9e; } /* Active - Orange */
+.card:nth-child(6) { background-color: #795548; } /* Last Updated - Brown */
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    ul {
+        grid-template-columns: 1fr; /* Stack boxes on smaller screens */
+    }
+
+    .card {
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .card_name {
+        font-size: 1.2rem;
+    }
+
+    .card_total {
+        font-size: 2rem;
+    }
+
+    .card_small {
+        font-size: 1.5rem;
+    }
+}
